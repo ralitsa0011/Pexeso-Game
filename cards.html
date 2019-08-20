@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pexeso Game</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    
+    <body>
+        <section class="score-panel">
+            <div id="score" class="score"></div>
+            <div id = "highScore" class="highScore"></div>
+    
+            <div class="restart" onclick=startGame()>
+                <i class="fa fa-repeat"></i>
+            </div>           
+        </section>
+
+        <div id="timer" class="timer">
+            <div id="timerInner" class="timerInner"></div>
+        </div>
+
+        <img id="resetImg" onclick="location.reload()" src="images/reset.png">
+
+        <div class="container">
+            <div id="game"></div>
+            <section id="grid" class="grid"></section>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

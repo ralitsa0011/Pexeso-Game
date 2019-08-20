@@ -1,0 +1,155 @@
+body {
+    background-image: url("images/SpacePexeso_1366х768.png");
+    background-repeat: no-repeat;
+    color: #361157;
+    overflow: hidden;
+}
+
+.score-panel{
+    background-color: #dad8e2;
+    width: 200px;
+    height: 58px;
+    margin-top: -8px;
+    margin-left: -8px;
+    border-radius: 0 0 20px 0;
+}
+
+.score{
+    font-size: 28px;
+    padding-left: 35px;
+    font-weight: bold;
+}
+
+.highScore{
+    padding-left: 35px;
+    font-weight: bold;
+}
+
+.timer {
+  margin: -25px 10px 10px 650px;
+  height: 20px;
+  width: 760px;
+  background-color: #dad8e2;
+  border-radius: 25px;
+  transform: translateX(-50%);
+}
+
+.timerInner{
+  width: 760px;
+  height: 20px;
+  background: #8e44aded;
+  margin: -25px 10px 10px 0px;
+  border-radius: 25px;
+}
+
+.startImage {
+    display:inline-block;
+    background-image: url("images/start.png");
+    margin-top: 302px;
+    margin-left: 283px;
+    height: 101px;
+    width:809px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cards {
+    margin:23px 300px 29px 119px;
+    height: 580px;
+    width:1027px;
+    border: 3px solid gray;
+    border-radius: 9px;    
+}
+
+@keyframes flipInY {
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		transform: perspective(400px);
+    }
+}
+
+.grid {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+  
+.card {
+	position: relative;
+	transition: all .4s linear;
+	transform-style: preserve-3d;
+	margin: 5px;
+}
+  
+.card,
+.back,
+.front {
+height: 169px;
+width: 130px;
+border-radius: 10px;
+}
+
+.back,
+.front {
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.front {
+	z-index: 2;
+	background: url('images/card.png') no-repeat center center / contain;
+}
+  
+.back {
+	transform: rotateY(180deg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.selected {
+	transform: rotateY(180deg);
+}
+
+.match .front {
+	transform: rotateY(180deg)!important;
+}
+
+#resetImg{
+	position:absolute;
+	right:0;
+	top:0;
+	cursor: pointer;
+}
+
+.container{
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	top: 10px;
+	transform: translateX(-50%);
+	padding: 20px;
+	background-color: #ffffff78;
+	border-radius: 14px;
+}
